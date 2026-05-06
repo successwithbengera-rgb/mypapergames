@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games — ChessTCG</title>
+  <meta name="description" content="All TCGs covered by the ChessTCG Format Project — from Yu-Gi-Oh! to Flesh and Blood." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">
+      <span class="nav__logo-chess">ChessTCG</span>
+      <span class="nav__logo-tcg">♟ The Format Project</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="../index.html" class="nav__link">Home</a></li>
+      <li><a href="games.html" class="nav__link">Games</a></li>
+      <li><a href="philosophy.html" class="nav__link">Philosophy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <p class="section__label">The Lineup</p>
+      <h1 class="hero__title" style="font-size: clamp(3rem,10vw,9rem); opacity:1; animation:none;">Games</h1>
+      <p style="font-family:var(--font-serif); font-style:italic; color:var(--parchment); font-size:1.15rem; margin-top:20px; max-width:560px; line-height:1.6;">
+        Nine games. Infinite formats. We find the combinations where 
+        each one plays to its absolute ceiling.
+      </p>
+    </div>
+  </div>
+
+  <!-- Games Grid -->
+  <section class="section">
+    <div class="games-grid" id="all-games"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">ChessTCG</div>
+        <p class="footer__tagline">Curating the formats where trading card games reach their highest potential.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Navigate</p>
+        <ul class="footer__links">
+          <li><a href="../index.html" class="footer__link">Home</a></li>
+          <li><a href="games.html" class="footer__link">Games</a></li>
+          <li><a href="philosophy.html" class="footer__link">Philosophy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Games</p>
+        <ul class="footer__links" id="footer-games"></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2024 ChessTCG — The Format Project.</p>
+      <p class="footer__copy">♟ Low floor. Infinite ceiling.</p>
+    </div>
+  </footer>
+
+  <script src="../js/content.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    const grid = document.getElementById('all-games');
+    GAMES.forEach(game => {
+      const href = game.enabled && game.slug ? `games/${game.slug}.html` : '#';
+      grid.innerHTML += `
+        <a href="${href}" class="game-card ${!game.enabled ? 'game-card--placeholder' : ''}">
+          <span class="game-card__tag">${game.tag}</span>
+          <h3 class="game-card__name">${game.name}</h3>
+          <p class="game-card__desc">${game.description}</p>
+          <div class="game-card__meta">
+            <span class="game-card__count">${game.matchupCount} matchup${game.matchupCount !== 1 ? 's' : ''}</span>
+            <span class="game-card__arrow">${game.enabled && game.slug ? '↗' : '—'}</span>
+          </div>
+        </a>`;
+    });
+
+    const footerGames = document.getElementById('footer-games');
+    GAMES.filter(g => g.enabled && g.slug).forEach(game => {
+      footerGames.innerHTML += `<li><a href="games/${game.slug}.html" class="footer__link">${game.name}</a></li>`;
+    });
+  </script>
+</body>
+</html>
