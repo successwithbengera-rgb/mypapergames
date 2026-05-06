@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon TCG — ChessTCG</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/game-page.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">CHESS<span>TCG</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Manifesto</a>
+      <a href="../games.html" class="active">Games</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+  <header class="game-header">
+    <div class="container">
+      <a href="../games.html" class="breadcrumb">← All Games</a>
+      <div class="game-header-icon">◉</div>
+      <h1>Pokémon TCG</h1>
+      <p class="game-header-desc">Modern Pokémon is frequently too linear. ChessTCG curates formats that restore depth and penalize autopilot play.</p>
+    </div>
+  </header>
+  <main>
+    <section class="resource-note">
+      <div class="container">
+        <div class="resource-badge resource-badge-warning">Energy Cards in Deck</div><p>Energy variance is addressed in ChessTCG format and deck selection for this game.</p>
+      </div>
+    </section>
+    <section class="matchups-section">
+      <div class="container">
+        <div class="section-label">Matchups</div>
+        <h2>Approved <em>Formats</em> &amp; Matchups</h2>
+        <p class="matchups-intro">Each matchup has been evaluated against ChessTCG principles. Click any matchup to read the full analysis, decklists, and format rules.</p>
+        <div class="matchups-grid" id="matchups-grid">
+          <div class="matchup-loading">Loading matchups&hellip;</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">CHESS<span>TCG</span></div>
+      <p class="footer-tagline">A format philosophy project. Not affiliated with any card game publisher.</p>
+      <div class="footer-links">
+        <a href="../index.html">Manifesto</a>
+        <a href="../games.html">Games</a>
+        <a href="../about.html">About</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script>loadMatchups('../data/matchups/pokemon.json', 'matchups-grid', '../matchups/pokemon/');</script>
+</body>
+</html>

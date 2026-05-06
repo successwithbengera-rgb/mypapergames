@@ -1,0 +1,50 @@
+/* ============================================
+   ABOUT PAGE STYLES
+============================================ */
+
+.about-section {
+  padding: var(--section-gap) 0;
+  background: var(--ink);
+}
+
+.about-container {
+  max-width: 800px;
+}
+
+.about-content h2 {
+  font-size: 1.5rem;
+  color: var(--paper);
+  margin: 3rem 0 1.25rem;
+}
+
+.about-content h2:first-child {
+  margin-top: 0;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  color: var(--dust);
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.about-principles {
+  margin: 1.25rem 0 1.25rem 1.5rem;
+}
+
+.about-principles li {
+  font-size: 1rem;
+  color: var(--dust);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-dark);
+  line-height: 1.7;
+}
+
+.about-principles li:last-child {
+  border-bottom: none;
+}
+
+.about-content strong {
+  color: var(--paper);
+  font-weight: 600;
+}

@@ -1,0 +1,409 @@
+/* ============================================
+   HOME PAGE STYLES
+============================================ */
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 6rem 2rem 4rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(184, 149, 58, 0.06) 0%, transparent 60%),
+              linear-gradient(135deg, var(--smoke) 0%, var(--ink) 60%);
+}
+
+.board-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(184, 149, 58, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 149, 58, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  animation: heroFadeIn 1.2s ease both;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+  font-size: 0.85em;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: var(--dust);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  max-width: 55ch;
+}
+
+.hero-cta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-cta:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.hero-piece {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(8rem, 18vw, 18rem);
+  color: rgba(184, 149, 58, 0.08);
+  z-index: 1;
+  pointer-events: none;
+  animation: pieceFade 2s ease both 0.5s;
+  user-select: none;
+}
+
+@keyframes pieceFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- Philosophy Section ---- */
+.philosophy {
+  padding: var(--section-gap) 0;
+  background: var(--smoke);
+}
+
+.section-title {
+  margin-bottom: 3rem;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2px;
+  margin-top: 2rem;
+}
+
+.philosophy-block {
+  padding: 2rem;
+  background: var(--ink);
+  border: 1px solid var(--border-dark);
+  transition: border-color 0.2s;
+}
+
+.philosophy-block:hover {
+  border-color: var(--gold-dim);
+}
+
+.block-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.philosophy-block h3 {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-block p {
+  font-size: 0.95rem;
+  color: var(--dust);
+  line-height: 1.7;
+}
+
+/* ---- Chess Section ---- */
+.chess-section {
+  padding: var(--section-gap) 0;
+  background: var(--ink);
+}
+
+.chess-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.chess-lead {
+  font-size: 1.25rem;
+  color: var(--paper);
+  font-style: italic;
+  margin: 1.5rem 0;
+  border-left: 2px solid var(--gold);
+  padding-left: 1.25rem;
+}
+
+.chess-principles {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.chess-principles li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-dark);
+  font-size: 0.95rem;
+  color: var(--dust);
+}
+
+.chess-principles li:last-child { border-bottom: none; }
+
+.chess-principles strong {
+  display: block;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+/* ---- Chessboard Visual ---- */
+.chessboard {
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+  border: 2px solid var(--gold-dim);
+  box-shadow: 0 0 60px rgba(184, 149, 58, 0.1), 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.cb-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.cb-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+
+.cb-cell.dark { background: rgba(184, 149, 58, 0.12); }
+.cb-cell.light { background: rgba(245, 240, 232, 0.04); }
+
+.cb-cell.has-piece {
+  color: var(--paper);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* ---- Archetypes Section ---- */
+.archetypes {
+  padding: var(--section-gap) 0;
+  background: var(--smoke);
+}
+
+.archetypes-lead {
+  font-size: 1.1rem;
+  color: var(--dust);
+  font-style: italic;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.archetype-card {
+  padding: 2.5rem;
+  background: var(--ink);
+  border: 1px solid var(--border-dark);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.archetype-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.archetype-card:hover {
+  border-color: var(--gold-dim);
+}
+
+.archetype-card:hover::before {
+  transform: scaleX(1);
+}
+
+.archetype-number {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+}
+
+.archetype-card h3 {
+  font-size: 1.5rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+}
+
+.archetype-card p {
+  font-size: 0.95rem;
+  color: var(--dust);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.archetype-example {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  color: var(--ash);
+  line-height: 1.5;
+  border-top: 1px solid var(--border-dark);
+  padding-top: 1rem;
+}
+
+/* ---- Principles ---- */
+.principles {
+  padding: var(--section-gap) 0;
+  background: var(--ink);
+}
+
+.principles-list {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border-dark);
+}
+
+.principle-item {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-dark);
+  align-items: flex-start;
+}
+
+.principle-num {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--gold-dim);
+  flex-shrink: 0;
+  width: 2rem;
+  padding-top: 0.2rem;
+}
+
+.principle-content h4 {
+  color: var(--paper);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.principle-content p {
+  font-size: 0.95rem;
+  color: var(--dust);
+}
+
+/* ---- CTA Section ---- */
+.cta-section {
+  padding: var(--section-gap) 0;
+  text-align: center;
+  background: var(--smoke);
+  border-top: 1px solid var(--border-dark);
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: var(--dust);
+  font-style: italic;
+  margin: 0 auto 2rem;
+  max-width: 50ch;
+}
+
+.cta-btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .chess-layout {
+    grid-template-columns: 1fr;
+  }
+  .chess-board-visual {
+    order: -1;
+  }
+  .chessboard {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-piece { display: none; }
+}

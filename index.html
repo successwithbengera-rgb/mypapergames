@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChessTCG — The Art of Infinite Replayability</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">CHESS<span>TCG</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Manifesto</a>
+      <a href="games.html">Games</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="board-grid"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">A New Format Philosophy</p>
+      <h1 class="hero-title">Chess<br><em>TCG</em></h1>
+      <p class="hero-sub">Trading card games reimagined through the lens of infinite replayability, alternating play, and the eternal elegance of chess.</p>
+      <a href="games.html" class="hero-cta">Explore the Formats</a>
+    </div>
+    <div class="hero-piece">♛</div>
+  </header>
+
+  <main>
+
+    <!-- Core Philosophy Section -->
+    <section class="philosophy">
+      <div class="container">
+        <div class="section-label">The Problem</div>
+        <h2 class="section-title">Great Games, <em>Broken Pieces</em></h2>
+        <div class="philosophy-grid">
+          <div class="philosophy-block">
+            <span class="block-icon">♟</span>
+            <h3>Power Creep</h3>
+            <p>Trading card games must sell new products. Without a rotating format, the only solution is printing stronger cards — until the game no longer resembles what made it great.</p>
+          </div>
+          <div class="philosophy-block">
+            <span class="block-icon">⏱</span>
+            <h3>Solitaire Turns</h3>
+            <p>Modern TCGs suffer from turns where one player plays for ten minutes while the other watches. Alternating play isn't just preferred — it's fundamental to what makes a game <em>a game</em>.</p>
+          </div>
+          <div class="philosophy-block">
+            <span class="block-icon">💥</span>
+            <h3>Non-Games</h3>
+            <p>Blowout cards that end games on resolution. Matchups decided by who draws the better hand. These create non-games — situations where continuing to play is meaningless.</p>
+          </div>
+          <div class="philosophy-block">
+            <span class="block-icon">↔</span>
+            <h3>Linear Strategy</h3>
+            <p>Decks that do one thing, executed by anyone with a pulse. The beauty of TCGs is the decision tree — when that tree collapses into a single branch, the game is already over.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chess Analogy Section -->
+    <section class="chess-section">
+      <div class="container">
+        <div class="chess-layout">
+          <div class="chess-text">
+            <div class="section-label">The Blueprint</div>
+            <h2>What Chess Gets <em>Right</em></h2>
+            <p class="chess-lead">Chess is not a perfect game because it is old. It is a perfect game because it was designed correctly.</p>
+            <ul class="chess-principles">
+              <li>
+                <strong>Low skill floor, stratospheric skill ceiling.</strong>
+                Anyone can learn the rules in minutes. Mastery takes a lifetime. The game welcomes everyone and rewards dedication infinitely.
+              </li>
+              <li>
+                <strong>Infinite replayability through decision trees.</strong>
+                You cannot memorize chess. You can learn openings, patterns, theory — but the game is always decided by micro-decisions that no memory can prepare you for.
+              </li>
+              <li>
+                <strong>No blowout pieces.</strong>
+                Even with a queen advantage, you can lose. The strongest element of the game is powerful — but never unbeatable. There is always an out.
+              </li>
+              <li>
+                <strong>Constant alternating play.</strong>
+                You move. I move. You move. I move. Neither player is ever a spectator.
+              </li>
+            </ul>
+          </div>
+          <div class="chess-board-visual">
+            <div class="chessboard">
+              <div class="cb-row">
+                <div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div>
+                <div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark"></div>
+                <div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark"></div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark has-piece">♜</div><div class="cb-cell light"></div>
+                <div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light has-piece">♞</div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark has-piece">♛</div>
+                <div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light has-piece">♝</div><div class="cb-cell dark"></div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell dark has-piece">♙</div><div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div>
+                <div class="cb-cell dark has-piece">♟</div><div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light"></div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell light"></div><div class="cb-cell dark has-piece">♗</div><div class="cb-cell light"></div><div class="cb-cell dark"></div>
+                <div class="cb-cell light"></div><div class="cb-cell dark has-piece">♙</div><div class="cb-cell light"></div><div class="cb-cell dark"></div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell dark"></div><div class="cb-cell light"></div><div class="cb-cell dark has-piece">♙</div><div class="cb-cell light"></div>
+                <div class="cb-cell dark"></div><div class="cb-cell light has-piece">♙</div><div class="cb-cell dark"></div><div class="cb-cell light"></div>
+              </div>
+              <div class="cb-row">
+                <div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light has-piece">♔</div><div class="cb-cell dark"></div>
+                <div class="cb-cell light"></div><div class="cb-cell dark"></div><div class="cb-cell light has-piece">♖</div><div class="cb-cell dark"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Three Archetypes -->
+    <section class="archetypes">
+      <div class="container">
+        <div class="section-label">The Three Pillars</div>
+        <h2>Accepted <em>Archetypes</em></h2>
+        <p class="archetypes-lead">ChessTCG formats are built around three archetypes. Tempo is explicitly excluded — not because it cannot be skilled, but because it cannot be <em>deep</em>.</p>
+        <div class="archetype-grid">
+          <div class="archetype-card">
+            <div class="archetype-number">01</div>
+            <h3>Control</h3>
+            <p>The art of denial. Every card you play is a decision — not just whether to play it, but when, and against what. Control rewards patience, reads, and the ability to identify the opponent's highest-value target in real time.</p>
+            <div class="archetype-example">Example: Reactive disruption, targeted negation, tempo-setting through attrition</div>
+          </div>
+          <div class="archetype-card">
+            <div class="archetype-number">02</div>
+            <h3>Midrange</h3>
+            <p>The art of value. Midrange decks trade efficiently, adapt to the board state, and win through accumulated advantage. No single card wins the game. The game is won by a thousand cuts.</p>
+            <div class="archetype-example">Example: Flexible threats, adaptive sequencing, incremental board dominance</div>
+          </div>
+          <div class="archetype-card">
+            <div class="archetype-number">03</div>
+            <h3>Toolbox</h3>
+            <p>The art of answers. A toolbox deck carries solutions to multiple threats, selecting the right tool for the right moment. When done correctly, this is perhaps the most skill-expressive archetype in existence.</p>
+            <div class="archetype-example">Example: Situational silver bullets, tutor-based consistency, reactive flexibility</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Design Principles -->
+    <section class="principles">
+      <div class="container">
+        <div class="section-label">Format Rules</div>
+        <h2>The <em>ChessTCG</em> Standard</h2>
+        <div class="principles-list">
+          <div class="principle-item">
+            <span class="principle-num">I</span>
+            <div class="principle-content">
+              <h4>Alternating Play is Sacred</h4>
+              <p>Any format where one player can meaningfully take a 10-minute turn while the other watches is disqualified. Turn structure must create constant engagement for both players.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-num">II</span>
+            <div class="principle-content">
+              <h4>Every Threat Has an Out</h4>
+              <p>The strongest card in the format may be powerful — it may even be dominant — but there must always exist a response. Non-games are not tolerated.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-num">III</span>
+            <div class="principle-content">
+              <h4>Matchups Must Be Asymmetric but Fair</h4>
+              <p>Mirror matches are fine. But asymmetric matchups — control vs midrange, toolbox vs control — must remain genuinely contested. No archetype should be a free win.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-num">IV</span>
+            <div class="principle-content">
+              <h4>Skill Decides the Game</h4>
+              <p>Resource variance (mana screw, brick hands) is acknowledged and addressed in format curation. Formats are selected and decks are designed to minimize non-skill variance.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="principle-num">V</span>
+            <div class="principle-content">
+              <h4>Strategy Cannot Be a Single Line</h4>
+              <p>Any deck whose entire gameplan is executable by a single memorized sequence is excluded. The decision tree must branch constantly, forced by the interplay of both players.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Find Your Format</h2>
+        <p>Eight trading card games. Carefully curated matchups. Formats built for infinite replayability.</p>
+        <a href="games.html" class="cta-btn">Browse All Games →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">CHESS<span>TCG</span></div>
+      <p class="footer-tagline">A format philosophy project. Not affiliated with any card game publisher.</p>
+      <div class="footer-links">
+        <a href="index.html">Manifesto</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

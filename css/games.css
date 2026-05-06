@@ -1,0 +1,139 @@
+/* ============================================
+   GAMES PAGE STYLES
+============================================ */
+
+.games-section {
+  padding: var(--section-gap) 0;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.game-card {
+  display: block;
+  border: 1px solid var(--border-dark);
+  background: var(--smoke);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(184, 149, 58, 0.04) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.game-card:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.game-card:hover::after {
+  opacity: 1;
+}
+
+.game-card-placeholder {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.game-card-inner {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.game-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-info h3 {
+  font-size: 1.25rem;
+  color: var(--paper);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.game-status {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.status-active {
+  background: rgba(80, 160, 100, 0.12);
+  border: 1px solid rgba(80, 160, 100, 0.3);
+  color: #7ec99a;
+}
+
+.status-pending {
+  background: rgba(184, 149, 58, 0.1);
+  border: 1px solid var(--gold-dim);
+  color: var(--gold-dim);
+}
+
+.game-desc {
+  font-size: 0.9rem;
+  color: var(--dust);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border-dark);
+  color: var(--ash);
+}
+
+.game-arrow {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--gold-dim);
+  align-self: flex-end;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.game-card:hover .game-arrow {
+  color: var(--gold-light);
+  transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .games-grid { grid-template-columns: 1fr; }
+}

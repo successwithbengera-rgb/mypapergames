@@ -1,0 +1,257 @@
+/* ============================================
+   MATCHUP POST STYLES
+============================================ */
+
+.matchup-header {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(to bottom, var(--smoke), var(--ink));
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.matchup-format-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+
+.matchup-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.meta-tag {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold-light);
+  background: rgba(184, 149, 58, 0.08);
+}
+
+.matchup-summary {
+  font-size: 1.15rem;
+  color: var(--dust);
+  font-style: italic;
+  max-width: 65ch;
+  margin-top: 1rem;
+  border-left: 2px solid var(--gold-dim);
+  padding-left: 1.25rem;
+}
+
+/* ---- Matchup Sections ---- */
+.matchup-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.matchup-section:nth-child(odd) {
+  background: var(--ink);
+}
+
+.matchup-section:nth-child(even) {
+  background: var(--smoke);
+}
+
+.matchup-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.matchup-section p {
+  font-size: 1rem;
+  color: var(--dust);
+  margin-bottom: 1.25rem;
+  max-width: 68ch;
+}
+
+/* ---- Rule Box ---- */
+.rule-box {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--gold-dim);
+  background: rgba(184, 149, 58, 0.05);
+}
+
+.rule-box h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.rule-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rule-box li {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--dust);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-dark);
+  letter-spacing: 0.03em;
+}
+
+.rule-box li:last-child { border-bottom: none; }
+
+/* ---- Matchup Dynamics ---- */
+.matchup-dynamics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5px;
+  margin: 2rem 0;
+}
+
+.dynamic-block {
+  padding: 1.75rem;
+  background: rgba(184, 149, 58, 0.04);
+  border: 1px solid var(--border-dark);
+}
+
+.dynamic-block h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.75rem;
+}
+
+.dynamic-block p {
+  font-size: 0.9rem;
+  color: var(--dust);
+  margin: 0;
+  max-width: none;
+}
+
+/* ---- Decklists ---- */
+.decklists-section {
+  background: var(--ink) !important;
+}
+
+.decklists-note {
+  font-style: italic;
+  color: var(--ash) !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.decklists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.decklist-card {
+  padding: 2rem;
+  border: 1px solid var(--border-dark);
+  background: var(--smoke);
+}
+
+.decklist-card h3 {
+  font-size: 1.2rem;
+  color: var(--paper);
+  margin-bottom: 0.25rem;
+}
+
+.deck-archetype {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem !important;
+  max-width: none !important;
+}
+
+.decklist {
+  margin-top: 1.5rem;
+}
+
+.decklist-section {
+  margin-bottom: 1.5rem;
+}
+
+.decklist-section h5 {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.decklist-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.decklist-section li {
+  font-size: 0.88rem;
+  color: var(--dust);
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(58, 53, 46, 0.5);
+  margin: 0;
+}
+
+.card-qty {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--gold-dim);
+  width: 2rem;
+  flex-shrink: 0;
+}
+
+.decklist-download, .proxy-download {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold);
+  transition: background 0.2s, color 0.2s;
+}
+
+.decklist-download:hover, .proxy-download:hover {
+  background: var(--gold-dim);
+  color: var(--ink);
+}
+
+.proxy-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px dashed var(--border-dark);
+  text-align: center;
+}
+
+.proxy-section h4 {
+  color: var(--paper);
+  margin-bottom: 0.5rem;
+}
+
+.proxy-section p {
+  color: var(--dust);
+  font-style: italic;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 768px) {
+  .decklists-grid { grid-template-columns: 1fr; }
+  .matchup-dynamics { grid-template-columns: 1fr; }
+}
